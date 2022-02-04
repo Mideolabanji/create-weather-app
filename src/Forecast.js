@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ForecastDay from "./ForecastDay";
 import Icon from "./Icon";
 import axios from "axios";
 
@@ -11,8 +12,8 @@ export default function Forecast(props) {
       min: Math.round(response.data.daily[1].temp.min),
       max: Math.round(response.data.daily[1].temp.max),
       icon: response.data.daily[1].weather[0].icon,
+      days: response.data.daily[1].dt * 1000,
     });
-    console.log(response);
   }
 
   if (loaded) {
@@ -20,7 +21,7 @@ export default function Forecast(props) {
       <div className="Forecast">
         <div className="row">
           <div className="col">
-            <div>Fri</div>
+            <div>{<ForecastDay property={forecastData.days} />}</div>
             <div>
               <Icon property={forecastData.icon} size={40} />
             </div>
