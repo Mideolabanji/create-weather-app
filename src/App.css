@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+body {
+  background-color: whitesmoke;
+  margin: 30px auto;
+  max-width: 600px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .weather-container {
+  padding: 20px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  box-shadow: 2px 2px 1px 1px rgb(0 0 0 / 10%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App small {
+  font-size: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App small a {
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.App small a:hover {
+  text-decoration: underline;
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Body .padding {
+  padding: 10px;
+  font-size: 22px;
+}
+
+.Body .margin {
+  margin-right: 5px;
+}
+
+.Body h2 {
+  font-size: 51px;
+  font-weight: 500;
+}
+
+.Body h6,
+h5 {
+  font-weight: 400;
+}
+
+.Body h5 {
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.Body h1 .city-temperature {
+  font-weight: 100;
+  font-size: 120px;
+}
+
+.degree {
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  bottom: 70px;
+}
+
+.Body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Body img {
+  width: 50%;
 }

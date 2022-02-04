@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Weather from "./Weather";
 
-function App() {
+import "./App.css";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <div className="weather-container">
+          <Weather defaultCity="Lagos" />
+        </div>
+        <small>
+          Coded (
+          <a
+            href="https://github.com/Mideolabanji/weather-react"
+            target="_blank"
+            rel="noreferrer"
+          >
+            open-source code
+          </a>
+          ) and designed by{" "}
+          <a
+            href="https://olamide-olabanji.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Olamide Olabanji
+          </a>
+        </small>
+      </div>
     </div>
   );
 }
-
-export default App;
