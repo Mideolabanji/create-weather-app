@@ -13,7 +13,7 @@ export default function App() {
         <small>
           Coded (
           <a
-            href="https://github.com/Mideolabanji/weather-react"
+            href="https://github.com/Mideolabanji/create-weather-app"
             target="_blank"
             rel="noreferrer"
           >

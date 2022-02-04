@@ -9,7 +9,6 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function displayWeatherData(response) {
-    console.log(response.data);
     setWeatherData({
       loaded: true,
       temperature: response.data.main.temp,
