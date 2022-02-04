@@ -70,3 +70,17 @@ h5 {
 .Body img {
   width: 50%;
 }
+
+.center {
+  margin-top: 30px;
+  margin-left: 220px;
+}
+
+.center .loading {
+  margin-top: 30px;
+  font-size: 400;
+}
+
+.Forecast {
+  text-align: center;
+}
