@@ -3,6 +3,7 @@ import axios from "axios";
 import { Oval } from "react-loader-spinner";
 import "./App.css";
 import Body from "./Body";
+import CurrentBtn from "./CurrentBtn";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
@@ -41,7 +42,7 @@ export default function Weather(props) {
       <div className="Weather">
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-9">
+            <div className="col-6">
               <input
                 className="form-control"
                 type="search"
@@ -50,12 +51,15 @@ export default function Weather(props) {
                 onChange={updateCity}
               />
             </div>
-            <div className="col-3 ">
+            <div className="col-3">
               <input
-                className="btn btn-secondary"
+                className="btn btn-secondary w-100"
                 type="submit"
                 value="Search"
               />
+            </div>
+            <div className="col-3">
+              <CurrentBtn />
             </div>
           </div>
         </form>
