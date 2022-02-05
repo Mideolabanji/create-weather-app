@@ -50,6 +50,10 @@ h5 {
   text-transform: capitalize;
 }
 
+.h5-font {
+  font-size: 1.25rem;
+}
+
 .Body h1 .city-temperature {
   font-weight: 100;
   font-size: 120px;
@@ -60,6 +64,10 @@ h5 {
   font-weight: 400;
   position: relative;
   bottom: 70px;
+}
+
+.bold {
+  font-weight: 600;
 }
 
 .Body ul {
@@ -83,4 +91,13 @@ h5 {
 
 .Forecast {
   text-align: center;
+}
+
+.forecast-minimum-temperature {
+  opacity: 0.7;
+}
+
+.degree-link {
+  color: black;
+  text-decoration: none;
 }

@@ -19,7 +19,11 @@ export default function Degree(props) {
         <span className="city-temperature">{Math.round(props.property)}</span>
         <span className="degree">
           <span>°C</span>|
-          <a href="/" onClick={showFahrenheitDegree}>
+          <a
+            className="degree-link bold"
+            href="/"
+            onClick={showFahrenheitDegree}
+          >
             °F
           </a>
         </span>
@@ -32,7 +36,11 @@ export default function Degree(props) {
         <span className="city-temperature">{Math.round(fahrenheit)}</span>
         <span className="degree">
           <span>
-            <a href="/" onClick={showCelciusDegree}>
+            <a
+              className="degree-link bold"
+              href="/"
+              onClick={showCelciusDegree}
+            >
               °C
             </a>
           </span>

@@ -11,12 +11,13 @@ export default function ForecastDays(props) {
 
   return (
     <span>
-      <div>{day}</div>
+      <div className="h5-font">{day}</div>
       <div>
         <Icon property={icon} size={40} />
       </div>
       <div>
-        <span>{max}°</span> <span>{min}°</span>
+        <span>{max}°</span>{" "}
+        <span className="forecast-minimum-temperature">{min}°</span>
       </div>
     </span>
   );
