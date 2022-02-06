@@ -3,7 +3,6 @@ import axios from "axios";
 import { Oval } from "react-loader-spinner";
 import "./App.css";
 import Body from "./Body";
-import CurrentBtn from "./CurrentBtn";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
@@ -37,6 +36,16 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function currentLocation(position) {
+    let locationApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=872e937052bfbc7cf66f2ac8c3fcaba7`;
+    axios.get(locationApiUrl).then(displayWeatherData);
+  }
+
+  function displayCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(currentLocation);
+  }
+
   if (weatherData.loaded) {
     return (
       <div className="Weather">
@@ -59,7 +68,12 @@ export default function Weather(props) {
               />
             </div>
             <div className="col-3">
-              <CurrentBtn />
+              <input
+                onClick={displayCurrentLocation}
+                className="btn btn-secondary w-100"
+                type="button"
+                value="Current 📍"
+              />
             </div>
           </div>
         </form>
